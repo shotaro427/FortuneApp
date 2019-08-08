@@ -100,6 +100,9 @@
                                 <state key="normal" title="占う">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startFortune:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qe9-h8-4B9"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YHP-XN-oGv">
                                 <rect key="frame" x="0.0" y="448.5" width="414" height="413.5"/>

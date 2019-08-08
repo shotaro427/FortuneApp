@@ -85,5 +85,31 @@ class ViewController: UIViewController {
     @IBAction func moveSlider(_ sender: UISlider) {
         sliderValueLabel.text = String(Int(ceil(sliderValue.value))) // ラベルに0~100をで表示させる
     }
+    
+    // 「占う」ボタン
+    @IBAction func startFortune(_ sender: Any) {
+        
+        // 以下パラメータの取得
+        // datePickerからdate型の値を取得
+        let date = datePicker.date
+        // 年/月/日それぞれを取得
+        year = datePicker.calendar.component(.year, from: date)
+        month = datePicker.calendar.component(.month, from: date)
+        day = datePicker.calendar.component(.day, from: date)
+        
+        // 血液型を取得(0: A型, 1: B型, 2: O型, 3: AB型)
+        bloodIndex = bloodType.selectedSegmentIndex
+        
+        // スライドバーの値を取得
+        favNum = Int(ceil(sliderValue.value))
+        
+        // 以下パラメータの加工
+        // 各パラメータを4or3で割った余りで、表示する内容を決定する
+        year %= 4 // 4種類
+        month %= 3 // 3種類
+        day %= 4 // 4種類
+        favNum %= 4 // 4種類
+    }
+    
 }
 
