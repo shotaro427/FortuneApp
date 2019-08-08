@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  FortunesApp
 //
-//  Created by 田内　翔太郎 on 2019/08/08.
+//  Created by 田内　翔太郎 on 2019/08/07.
 //  Copyright © 2019 田内　翔太郎. All rights reserved.
 //
 
@@ -12,9 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
 
 }
 
