@@ -38,43 +38,37 @@ class ViewController: UIViewController {
     var favNum: Int = 0
     
     // 占い結果の文言
-    // 生年月日の「年」の情報から表示する占い結果
-    let resultYear: [String] = [ // 年を4で割った時のあまりで判定
-        "春の",
-        "夏の",
-        "秋の",
-        "冬の"
-    ]
-    
-    // 生年月日の「月」の情報から表示する占い結果
-    let resultMonth: [String] = [ // 月を3で割った時のあまりで判定
-        "海に",
-        "山に",
-        "川に"
-    ]
-    
-    // 生年月日の「日」の情報から表示する占い結果
-    let resultDay: [String] = [ // 日を4で割った時の余りで判定
-        "愛されています。\n",
-        "好まれています。\n",
-        "嫌われています。\n",
-        "憎まれています。\n"
-    ]
-    
-    // 血液型から表示する占い結果(上から順にA/B/O/AB型)
-    let resultBlood: [String] = [
-        "神経がこまやかで、人の気持ちを敏感に感じとることができます。\n",
-        "他人の思惑、常識、習慣をあまり意識せず、思うところをストレートに実行することができます。\n",
-        "精神性が強く、夢や希望をいつまでも追い続けることができます。\n",
-        "警戒心が強いが、気心の知れた間柄になると、めんどうみがよくなることがあります。\n"
-    ]
-    
-    // 好きな値から表示する占い結果
-    let resultNumber: [String] = [
-        "また、あなたはリーダーとしての素質を持ち、人を惹きつける魅力のあるオンリーワンの存在になる可能性を秘めています。",
-        "また、あなたは愛すること、やさしさ、知性や協調性のの高さが特徴で、争いを好まない優しい性格で誰からも好かれ、信頼されます。",
-        "また、あなたは生命力に溢れ、エネルギッシュに人生を切り開いていく力を持っています。エリートコースを歩む人が多いのが特徴です。",
-        "また、あなたはまじめにコツコツと努力を積み重ね、最終的にはすばらしい結果を残し成功する大器晩成型である可能性が高いです。"
+    let fortuneResult: [String: [String]] = [
+        "Year": [     // 年を4で割った時のあまりで判定
+            "春の",
+            "夏の",
+            "秋の",
+            "冬の"
+        ],
+        "Month": [ // 月を3で割った時のあまりで判定
+            "海に",
+            "山に",
+            "川に"
+        ],
+        "Day": [ // 日を4で割った時の余りで判定
+              "愛されています。\n",
+              "好まれています。\n",
+              "嫌われています。\n",
+              "憎まれています。\n"
+        ],
+        "BloodType": [ // 血液型のボタンのIndex情報で判定
+            "神経がこまやかで、人の気持ちを敏感に感じとることができます。\n",
+            "他人の思惑、常識、習慣をあまり意識せず、思うところをストレートに実行することができます。\n",
+            "精神性が強く、夢や希望をいつまでも追い続けることができます。\n",
+            "警戒心が強いが、気心の知れた間柄になると、めんどうみがよくなることがあります。\n"
+        ],
+        "FavoriteNumber": [ // スライダーの値を4で割った時のあまりで判断
+            "また、あなたはリーダーとしての素質を持ち、人を惹きつける魅力のあるオンリーワンの存在になる可能性を秘めています。",
+            "また、あなたは愛すること、やさしさ、知性や協調性のの高さが特徴で、争いを好まない優しい性格で誰からも好かれ、信頼されます。",
+            "また、あなたは生命力に溢れ、エネルギッシュに人生を切り開いていく力を持っています。エリートコースを歩む人が多いのが特徴です。",
+            "また、あなたはまじめにコツコツと努力を積み重ね、最終的にはすばらしい結果を残し成功する大器晩成型である可能性が高いです。"
+        ],
+        
     ]
     
     override func viewDidLoad() {
@@ -114,74 +108,19 @@ class ViewController: UIViewController {
         favNum %= 4 // 4種類
         
         // 以下占い結果表示部分
-        // 「年」パラメータから占い結果を決定
-        switch year {
-        case 0:
-            resultView.text += resultYear[year]
-        case 1:
-            resultView.text += resultYear[year]
-        case 2:
-            resultView.text += resultYear[year]
-        case 3:
-            resultView.text += resultYear[year]
-        default:
-            break
-        }
-        
-        // 「月」パラメータから占い結果を決定
-        switch month {
-        case 0:
-            resultView.text += resultMonth[month]
-        case 1:
-            resultView.text += resultMonth[month]
-        case 2:
-            resultView.text += resultMonth[month]
-        default:
-            break
-        }
-        
-        // 「日」パラメータから占い結果を決定
-        switch day {
-        case 0:
-            resultView.text += resultDay[day]
-        case 1:
-            resultView.text += resultDay[day]
-        case 2:
-            resultView.text += resultDay[day]
-        case 3:
-            resultView.text += resultDay[day]
-        default:
-            break
-        }
-        
-        // 血液型から占い結果を決定
-        switch bloodIndex {
-        case 0:
-            resultView.text += resultBlood[bloodIndex]
-        case 1:
-            resultView.text += resultBlood[bloodIndex]
-        case 2:
-            resultView.text += resultBlood[bloodIndex]
-        case 3:
-            resultView.text += resultBlood[bloodIndex]
-        default:
-            break
-        }
-        
-        // 好きな値から占い結果を決定
-        switch favNum {
-        case 0:
-            resultView.text += resultNumber[favNum]
-        case 1:
-            resultView.text += resultNumber[favNum]
-        case 2:
-            resultView.text += resultNumber[favNum]
-        case 3:
-            resultView.text += resultNumber[favNum]
-        default:
-            break
-        }
+        anserResult(year: year, month: month, day: day, bloodType: bloodIndex, favNum: favNum)
     }
     
+    /// 占い結果を表示する関数
+    /// year、day、favNum: それぞれの値を4で割った時のあまり、month: ３で割った時のあまり、bloodType: セグメントコントローラのIndex情報
+    func anserResult(year: Int, month: Int, day: Int, bloodType: Int, favNum: Int) {
+        // それぞれの定数に文言が入るのかどうかをguard文で判定
+        guard let resultYear = fortuneResult["Year"]?[year], let resultMonth = fortuneResult["Month"]?[month], let resultDay = fortuneResult["Day"]?[day], let resultBloodType = fortuneResult["BloodType"]?[bloodType], let resultFavNum = fortuneResult["FavoriteNumber"]?[favNum] else {
+            return
+        }
+        // textViewに占い結果を表示
+        resultView.text = resultYear + resultMonth + resultDay + resultBloodType + resultFavNum
+
+    }
 }
 
