@@ -10,7 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // 占い結果
+    // 占い結果に必要なパラメータ
+    // 年/月/日
+    @IBOutlet weak var datePicker: UIDatePicker!
+    // 血液型
+    @IBOutlet weak var bloodType: UISegmentedControl!
+    // スライダー
+    @IBOutlet weak var sliderValue: UISlider!
+    
+    // スライダーの値を表示させるラベル
+    @IBOutlet weak var sliderValueLabel: UILabel!
+    
+    // 占い結果を表示させるtextView
+    @IBOutlet weak var resultView: UITextView!
+    
+    
+    // 占いの表示内容を決定するための変数
+    // 生年月日の年
+    var year: Int = 0
+    // 生年月日の月
+    var month: Int = 0
+    // 生年月日の日
+    var day: Int = 0
+    // 血液型
+    var bloodIndex: Int = 0
+    // 好きな数字
+    var favNum: Int = 0
+    
+    // 占い結果の文言
     // 生年月日の「年」の情報から表示する占い結果
     let resultYear: [String] = [ // 年を4で割った時のあまりで判定
         "春の",
@@ -49,12 +76,6 @@ class ViewController: UIViewController {
         "また、あなたは生命力に溢れ、エネルギッシュに人生を切り開いていく力を持っています。エリートコースを歩む人が多いのが特徴です。",
         "また、あなたはまじめにコツコツと努力を積み重ね、最終的にはすばらしい結果を残し成功する大器晩成型である可能性が高いです。"
     ]
-
-
-    // スライダーの値を表示させるラベル
-    @IBOutlet weak var sliderValueLabel: UILabel!
-    // スライダー
-    @IBOutlet weak var sliderValue: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()

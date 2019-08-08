@@ -145,6 +145,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bloodType" destination="Ql9-tJ-Zsq" id="iOX-GZ-glX"/>
+                        <outlet property="datePicker" destination="ghV-tX-IxU" id="x12-hf-VS4"/>
+                        <outlet property="resultView" destination="YHP-XN-oGv" id="81X-F9-RWu"/>
                         <outlet property="sliderValue" destination="pwW-vd-d1L" id="nlE-Hk-y8B"/>
                         <outlet property="sliderValueLabel" destination="lRi-lM-cuc" id="CBo-FI-dlr"/>
                     </connections>
