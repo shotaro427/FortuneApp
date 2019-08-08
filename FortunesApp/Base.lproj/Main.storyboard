@@ -81,6 +81,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-vd-d1L">
                                 <rect key="frame" x="1" y="328" width="412" height="31"/>
+                                <connections>
+                                    <action selector="moveSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fiL-P8-5UP"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-lM-cuc">
                                 <rect key="frame" x="0.0" y="373" width="414" height="20.5"/>
@@ -141,6 +144,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sliderValue" destination="pwW-vd-d1L" id="nlE-Hk-y8B"/>
+                        <outlet property="sliderValueLabel" destination="lRi-lM-cuc" id="CBo-FI-dlr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

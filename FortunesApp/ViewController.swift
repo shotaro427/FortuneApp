@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // スライダーの値を表示させるラベル
+    @IBOutlet weak var sliderValueLabel: UILabel!
+    // スライダー
+    @IBOutlet weak var sliderValue: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    // スライダーが動くごとに呼び出される処理
+    @IBAction func moveSlider(_ sender: UISlider) {
+        sliderValueLabel.text = String(Int(ceil(sliderValue.value))) // ラベルに0~100をで表示させる
+    }
 }
 
