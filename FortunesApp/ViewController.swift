@@ -89,6 +89,9 @@ class ViewController: UIViewController {
     // 「占う」ボタン
     @IBAction func startFortune(_ sender: Any) {
         
+        // 占い結果のtextViewを初期化
+        resultView.text = ""
+        
         // 以下パラメータの取得
         // datePickerからdate型の値を取得
         let date = datePicker.date
