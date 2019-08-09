@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     // 年/月/日
     @IBOutlet weak var datePicker: UIDatePicker!
     // 血液型
-    @IBOutlet weak var bloodType: UISegmentedControl!
+    @IBOutlet weak var yourBloodType: UISegmentedControl!
     // スライダー
     @IBOutlet weak var sliderValue: UISlider!
     
@@ -37,36 +37,39 @@ class ViewController: UIViewController {
     var favNum: Int = 0
     
     // 占い結果の文言
-    let fortuneResult: [String: [String]] = [
-        "Year": [     // 年を4で割った時のあまりで判定
-            "春の",
-            "夏の",
-            "秋の",
-            "冬の"
-        ],
-        "Month": [ // 月を3で割った時のあまりで判定
-            "海に",
-            "山に",
-            "川に"
-        ],
-        "Day": [ // 日を4で割った時の余りで判定
-              "愛されています。\n",
-              "好まれています。\n",
-              "嫌われています。\n",
-              "憎まれています。\n"
-        ],
-        "BloodType": [ // 血液型のボタンのIndex情報で判定
-            "神経がこまやかで、人の気持ちを敏感に感じとることができます。\n",
-            "他人の思惑、常識、習慣をあまり意識せず、思うところをストレートに実行することができます。\n",
-            "精神性が強く、夢や希望をいつまでも追い続けることができます。\n",
-            "警戒心が強いが、気心の知れた間柄になると、めんどうみがよくなることがあります。\n"
-        ],
-        "FavoriteNumber": [ // スライダーの値を4で割った時のあまりで判断
-            "また、あなたはリーダーとしての素質を持ち、人を惹きつける魅力のあるオンリーワンの存在になる可能性を秘めています。",
-            "また、あなたは愛すること、やさしさ、知性や協調性のの高さが特徴で、争いを好まない優しい性格で誰からも好かれ、信頼されます。",
-            "また、あなたは生命力に溢れ、エネルギッシュに人生を切り開いていく力を持っています。エリートコースを歩む人が多いのが特徴です。",
-            "また、あなたはまじめにコツコツと努力を積み重ね、最終的にはすばらしい結果を残し成功する大器晩成型である可能性が高いです。"
-        ],
+    // 「年」によって決まる文言
+    let yearResult: [String] = [     // 年を4で割った時のあまりで判定
+    "春の",
+    "夏の",
+    "秋の",
+    "冬の"
+    ]
+    // 「月」によって決まる文言
+    let monthResult: [String] = [ // 月を3で割った時のあまりで判定
+    "海に",
+    "山に",
+    "川に"
+    ]
+    // 「日」によって決まる文言
+    let dayResult: [String] = [ // 日を4で割った時の余りで判定
+    "愛されています。\n",
+    "好まれています。\n",
+    "嫌われています。\n",
+    "憎まれています。\n"
+    ]
+    // 「血液型」によって決まる文言
+    let bloodResult: [String] = [ // 血液型のボタンのIndex情報で判定
+    "神経がこまやかで、人の気持ちを敏感に感じとることができます。\n",
+    "他人の思惑、常識、習慣をあまり意識せず、思うところをストレートに実行することができます。\n",
+    "精神性が強く、夢や希望をいつまでも追い続けることができます。\n",
+    "警戒心が強いが、気心の知れた間柄になると、めんどうみがよくなることがあります。\n"
+    ]
+    // 「好きな数字」によって決まる文言
+    let sliderResult: [String] = [ // スライダーの値を4で割った時のあまりで判断
+    "また、あなたはリーダーとしての素質を持ち、人を惹きつける魅力のあるオンリーワンの存在になる可能性を秘めています。",
+    "また、あなたは愛すること、やさしさ、知性や協調性のの高さが特徴で、争いを好まない優しい性格で誰からも好かれ、信頼されます。",
+    "また、あなたは生命力に溢れ、エネルギッシュに人生を切り開いていく力を持っています。エリートコースを歩む人が多いのが特徴です。",
+    "また、あなたはまじめにコツコツと努力を積み重ね、最終的にはすばらしい結果を残し成功する大器晩成型である可能性が高いです。"
     ]
     
     override func viewDidLoad() {
@@ -91,7 +94,7 @@ class ViewController: UIViewController {
         day = datePicker.calendar.component(.day, from: datePicker.date)
         
         // 血液型を取得(0: A型, 1: B型, 2: O型, 3: AB型)
-        bloodIndex = bloodType.selectedSegmentIndex
+        bloodIndex = yourBloodType.selectedSegmentIndex
         
         // スライドバーの値を取得
         favNum = Int(sliderValue.value)
@@ -110,13 +113,7 @@ class ViewController: UIViewController {
     /// 占い結果を表示する関数
     /// year、day、favNum: それぞれの値を4で割った時のあまり、month: ３で割った時のあまり、bloodType: セグメントコントローラのIndex情報
     func anserResult(year: Int, month: Int, day: Int, bloodType: Int, favNum: Int) {
-        // それぞれの定数に文言が入るのかどうかをguard文で判定
-        guard let resultYear = fortuneResult["Year"]?[year], let resultMonth = fortuneResult["Month"]?[month], let resultDay = fortuneResult["Day"]?[day], let resultBloodType = fortuneResult["BloodType"]?[bloodType], let resultFavNum = fortuneResult["FavoriteNumber"]?[favNum] else {
-            return
-        }
-        // textViewに占い結果を表示
-        resultView.text = resultYear + resultMonth + resultDay + resultBloodType + resultFavNum
-
+        resultView.text = yearResult[year] + monthResult[month] + dayResult[day] + bloodResult[bloodType] + sliderResult[favNum]
     }
 }
 

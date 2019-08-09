@@ -127,7 +127,6 @@
                             <constraint firstItem="ghV-tX-IxU" firstAttribute="top" secondItem="52R-Eb-lft" secondAttribute="bottom" id="V4B-vU-8Z2"/>
                             <constraint firstItem="YHP-XN-oGv" firstAttribute="top" secondItem="hjT-Gp-Cm0" secondAttribute="bottom" id="YjK-cM-5Da"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lRi-lM-cuc" secondAttribute="trailing" id="dEc-Ti-2Zc"/>
-                            <constraint firstItem="SJo-AA-27F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eoV-35-0r6"/>
                             <constraint firstItem="fTd-5D-35t" firstAttribute="top" secondItem="Ql9-tJ-Zsq" secondAttribute="bottom" constant="5" id="fzf-2J-4dK"/>
                             <constraint firstItem="FoP-7p-MBn" firstAttribute="top" secondItem="ghV-tX-IxU" secondAttribute="bottom" id="gv8-On-KBh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwW-vd-d1L" secondAttribute="trailing" constant="3" id="iMG-2G-tRG"/>
@@ -139,6 +138,7 @@
                             <constraint firstItem="ghV-tX-IxU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r5d-CR-o47"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTd-5D-35t" secondAttribute="trailing" id="rfk-xs-Kr8"/>
                             <constraint firstItem="YHP-XN-oGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tyD-hl-ait"/>
+                            <constraint firstItem="SJo-AA-27F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ugV-AZ-fcv"/>
                             <constraint firstItem="lRi-lM-cuc" firstAttribute="top" secondItem="pwW-vd-d1L" secondAttribute="bottom" constant="15" id="xEN-qp-jMi"/>
                             <constraint firstItem="52R-Eb-lft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y8e-he-Ujd"/>
                             <constraint firstItem="ghV-tX-IxU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yZs-0o-r1V"/>
