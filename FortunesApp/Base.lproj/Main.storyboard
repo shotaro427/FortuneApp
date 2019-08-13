@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,97 +15,105 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FortunesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの運勢を占います" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJo-AA-27F">
-                                <rect key="frame" x="0.0" y="44" width="414" height="20.5"/>
-                                <color key="backgroundColor" red="0.6835823655128479" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="52R-Eb-lft">
-                                <rect key="frame" x="0.0" y="65" width="414" height="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mJC-MB-IOe">
+                                <rect key="frame" x="0.0" y="20" width="320" height="340"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-bR-dBo">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの運勢を占います" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJo-AA-27F">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                        <color key="backgroundColor" red="0.6835823655128479" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="52R-Eb-lft">
+                                        <rect key="frame" x="0.0" y="21.5" width="320" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-bR-dBo">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUm-EF-4mB">
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOl-BV-257">
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghV-tX-IxU">
+                                        <rect key="frame" x="0.0" y="46.5" width="320" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ghV-tX-IxU" secondAttribute="height" multiplier="2.5:1" id="Ai9-kN-EYz"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="586847163.57792997">
+                                            <!--2019-08-07 05:06:03 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="ja_JP"/>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="血液型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoP-7p-MBn">
+                                        <rect key="frame" x="0.0" y="175.5" width="320" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUm-EF-4mB">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-tJ-Zsq">
+                                        <rect key="frame" x="0.0" y="197" width="320" height="29"/>
+                                        <segments>
+                                            <segment title="A型"/>
+                                            <segment title="B型"/>
+                                            <segment title="O型"/>
+                                            <segment title="AB型"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好きな値を指定してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-5D-35t">
+                                        <rect key="frame" x="0.0" y="226" width="320" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOl-BV-257">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-vd-d1L">
+                                        <rect key="frame" x="-2" y="247.5" width="324" height="31"/>
+                                        <connections>
+                                            <action selector="moveSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fiL-P8-5UP"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-lM-cuc">
+                                        <rect key="frame" x="0.0" y="278.5" width="320" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-Gp-Cm0">
+                                        <rect key="frame" x="0.0" y="300" width="320" height="40"/>
+                                        <color key="backgroundColor" red="0.88631278280000003" green="0.44382751170000001" blue="0.81482496360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="pVM-4Q-ZSh"/>
+                                        </constraints>
+                                        <state key="normal" title="占う">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startFortune:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qe9-h8-4B9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="ghV-tX-IxU" firstAttribute="width" secondItem="mJC-MB-IOe" secondAttribute="width" id="3JZ-TQ-dJx"/>
+                                </constraints>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghV-tX-IxU">
-                                <rect key="frame" x="0.0" y="89" width="414" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Zp1-nx-S5z"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="586847163.57792997">
-                                    <!--2019-08-07 05:06:03 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="ja_JP"/>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="血液型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoP-7p-MBn">
-                                <rect key="frame" x="0.0" y="239" width="414" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-tJ-Zsq">
-                                <rect key="frame" x="0.0" y="264.5" width="414" height="29"/>
-                                <segments>
-                                    <segment title="A型"/>
-                                    <segment title="B型"/>
-                                    <segment title="O型"/>
-                                    <segment title="AB型"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好きな値を指定してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-5D-35t">
-                                <rect key="frame" x="0.0" y="297.5" width="414" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-vd-d1L">
-                                <rect key="frame" x="1" y="328" width="412" height="31"/>
-                                <connections>
-                                    <action selector="moveSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="fiL-P8-5UP"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-lM-cuc">
-                                <rect key="frame" x="0.0" y="373" width="414" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-Gp-Cm0">
-                                <rect key="frame" x="0.0" y="408.5" width="414" height="40"/>
-                                <color key="backgroundColor" red="0.88631278280000003" green="0.44382751170000001" blue="0.81482496360000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pVM-4Q-ZSh"/>
-                                </constraints>
-                                <state key="normal" title="占う">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="startFortune:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qe9-h8-4B9"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YHP-XN-oGv">
-                                <rect key="frame" x="0.0" y="448.5" width="414" height="413.5"/>
+                                <rect key="frame" x="0.0" y="360" width="320" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -113,37 +121,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fTd-5D-35t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="20S-qb-W5U"/>
-                            <constraint firstItem="FoP-7p-MBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2cg-IH-94j"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hjT-Gp-Cm0" secondAttribute="trailing" id="6ye-gM-iGH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHP-XN-oGv" secondAttribute="trailing" id="921-XJ-EK2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="52R-Eb-lft" secondAttribute="trailing" id="C2q-e6-hul"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ql9-tJ-Zsq" secondAttribute="trailing" id="G2p-3U-ywn"/>
-                            <constraint firstItem="pwW-vd-d1L" firstAttribute="top" secondItem="fTd-5D-35t" secondAttribute="bottom" constant="10" id="JqB-e9-1pW"/>
-                            <constraint firstItem="pwW-vd-d1L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="KBL-Am-Tx3"/>
-                            <constraint firstItem="Ql9-tJ-Zsq" firstAttribute="top" secondItem="FoP-7p-MBn" secondAttribute="bottom" constant="5" id="N3Y-Eg-n1S"/>
-                            <constraint firstItem="lRi-lM-cuc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SMS-Vw-EbD"/>
-                            <constraint firstItem="hjT-Gp-Cm0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uh6-G3-CPI"/>
-                            <constraint firstItem="ghV-tX-IxU" firstAttribute="top" secondItem="52R-Eb-lft" secondAttribute="bottom" id="V4B-vU-8Z2"/>
-                            <constraint firstItem="YHP-XN-oGv" firstAttribute="top" secondItem="hjT-Gp-Cm0" secondAttribute="bottom" id="YjK-cM-5Da"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lRi-lM-cuc" secondAttribute="trailing" id="dEc-Ti-2Zc"/>
-                            <constraint firstItem="fTd-5D-35t" firstAttribute="top" secondItem="Ql9-tJ-Zsq" secondAttribute="bottom" constant="5" id="fzf-2J-4dK"/>
-                            <constraint firstItem="FoP-7p-MBn" firstAttribute="top" secondItem="ghV-tX-IxU" secondAttribute="bottom" id="gv8-On-KBh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwW-vd-d1L" secondAttribute="trailing" constant="3" id="iMG-2G-tRG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YHP-XN-oGv" secondAttribute="bottom" id="jF0-Xw-81r"/>
-                            <constraint firstItem="Ql9-tJ-Zsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ngh-XM-RLe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FoP-7p-MBn" secondAttribute="trailing" id="oaH-w3-rsD"/>
-                            <constraint firstItem="hjT-Gp-Cm0" firstAttribute="top" secondItem="lRi-lM-cuc" secondAttribute="bottom" constant="15" id="oiR-Fy-tpS"/>
-                            <constraint firstItem="SJo-AA-27F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pIH-6a-Dm9"/>
-                            <constraint firstItem="ghV-tX-IxU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r5d-CR-o47"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTd-5D-35t" secondAttribute="trailing" id="rfk-xs-Kr8"/>
-                            <constraint firstItem="YHP-XN-oGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tyD-hl-ait"/>
-                            <constraint firstItem="SJo-AA-27F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ugV-AZ-fcv"/>
-                            <constraint firstItem="lRi-lM-cuc" firstAttribute="top" secondItem="pwW-vd-d1L" secondAttribute="bottom" constant="15" id="xEN-qp-jMi"/>
-                            <constraint firstItem="52R-Eb-lft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y8e-he-Ujd"/>
-                            <constraint firstItem="ghV-tX-IxU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yZs-0o-r1V"/>
-                            <constraint firstItem="SJo-AA-27F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zu1-8v-L0D"/>
-                            <constraint firstItem="52R-Eb-lft" firstAttribute="top" secondItem="SJo-AA-27F" secondAttribute="bottom" constant="0.5" id="zx5-WC-5QK"/>
+                            <constraint firstItem="mJC-MB-IOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AXb-aK-xEC"/>
+                            <constraint firstItem="mJC-MB-IOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IWL-7T-pHh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YHP-XN-oGv" secondAttribute="bottom" id="O0s-9q-Q2Y"/>
+                            <constraint firstItem="YHP-XN-oGv" firstAttribute="top" secondItem="mJC-MB-IOe" secondAttribute="bottom" id="gDq-by-5p2"/>
+                            <constraint firstAttribute="trailing" secondItem="mJC-MB-IOe" secondAttribute="trailing" id="smQ-BP-XwU"/>
+                            <constraint firstItem="YHP-XN-oGv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vyy-9S-BHd"/>
+                            <constraint firstItem="YHP-XN-oGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wfA-YV-A3j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -157,6 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </scene>
     </scenes>
 </document>

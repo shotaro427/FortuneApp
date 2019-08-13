@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         
         // スライドバーの値を取得
         favNum = Int(sliderValue.value)
-        
+
         // 以下パラメータの加工
         // 各パラメータを4or3で割った余りで、表示する内容を決定する
         year %= 4 // 4種類
@@ -113,6 +113,7 @@ class ViewController: UIViewController {
     /// 占い結果を表示する関数
     /// year、day、favNum: それぞれの値を4で割った時のあまり、month: ３で割った時のあまり、bloodType: セグメントコントローラのIndex情報
     func anserResult(year: Int, month: Int, day: Int, bloodType: Int, favNum: Int) {
+        
         resultView.text = yearResult[year] + monthResult[month] + dayResult[day] + bloodResult[bloodType] + sliderResult[favNum]
     }
 }
