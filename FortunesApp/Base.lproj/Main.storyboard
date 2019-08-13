@@ -108,9 +108,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="ghV-tX-IxU" firstAttribute="width" secondItem="mJC-MB-IOe" secondAttribute="width" id="3JZ-TQ-dJx"/>
-                                </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YHP-XN-oGv">
                                 <rect key="frame" x="0.0" y="360" width="320" height="120"/>
